@@ -17,6 +17,7 @@
 		2E53BF4F2530ABCC00F1405A /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E53BF4E2530ABCC00F1405A /* Storyboard.swift */; };
 		2E53BF5C2530AE3C00F1405A /* CoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E53BF5B2530AE3C00F1405A /* CoordinatorTests.swift */; };
 		2E53BF642530B09D00F1405A /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E53BF632530B09D00F1405A /* MainCoordinator.swift */; };
+		2E53BF792530C3B000F1405A /* CommitsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E53BF782530C3B000F1405A /* CommitsViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		2E53BF4E2530ABCC00F1405A /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 		2E53BF5B2530AE3C00F1405A /* CoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorTests.swift; sourceTree = "<group>"; };
 		2E53BF632530B09D00F1405A /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		2E53BF782530C3B000F1405A /* CommitsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitsViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				2E53BF252530A45F00F1405A /* Info.plist */,
 				2E53BF5B2530AE3C00F1405A /* CoordinatorTests.swift */,
+				2E53BF782530C3B000F1405A /* CommitsViewControllerTests.swift */,
 			);
 			path = "iOS-fetch-GitHubTests";
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E53BF792530C3B000F1405A /* CommitsViewControllerTests.swift in Sources */,
 				2E53BF5C2530AE3C00F1405A /* CoordinatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
