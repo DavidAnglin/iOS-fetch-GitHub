@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CommitsViewController: UIViewController, Storyboard {
 
     override func viewDidLoad() {
         super.viewDidLoad()

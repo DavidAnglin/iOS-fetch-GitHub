@@ -16,6 +16,7 @@ class MainCoordinator: Coordinator {
     }
     
     func start() {
-        
+        let commitsVC = CommitsViewController.instantiate()
+        navigationController.pushViewController(commitsVC, animated: false)
     }
 }

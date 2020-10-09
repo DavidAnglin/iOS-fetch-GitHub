@@ -7,11 +7,11 @@
 
 import UIKit
 
-protocol Storyboarded {
+protocol Storyboard {
     static func instantiate() -> Self
 }
 
-extension Storyboarded where Self: UIViewController {
+extension Storyboard where Self: UIViewController {
     static func instantiate() -> Self {
         let fullName = NSStringFromClass(self)
         let className = fullName.components(separatedBy: ".")[1]

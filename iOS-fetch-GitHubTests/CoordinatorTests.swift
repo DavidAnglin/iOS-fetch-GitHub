@@ -27,6 +27,10 @@ class CoordinatorTests: XCTest {
         XCTAssertNotNil(sut.navigationController)
     }
     
+    func testCoordinator_onStart_viewControllerInNavController() {
+        XCTAssertTrue(sut.navigationController.viewControllers.count == 1)
+    }
+    
     override func tearDown() {
         super.tearDown()
         sut = nil
