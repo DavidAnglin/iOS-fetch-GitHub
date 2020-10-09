@@ -5,8 +5,8 @@
 //  Created by David Anglin on 10/9/20.
 //
 
-import XCTest
 @testable import iOS_fetch_GitHub
+import XCTest
 
 class CommitsViewControllerTests: XCTestCase {
 

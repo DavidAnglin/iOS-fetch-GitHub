@@ -5,11 +5,10 @@
 //  Created by David Anglin on 10/9/20.
 //
 
-import Foundation
-import XCTest
 @testable import iOS_fetch_GitHub
+import XCTest
 
-class CoordinatorTests: XCTest {
+class CoordinatorTests: XCTestCase {
     
     var sut: MainCoordinator!
     
@@ -28,11 +27,12 @@ class CoordinatorTests: XCTest {
     }
     
     func testCoordinator_onStart_viewControllerInNavController() {
+        sut.start()
         XCTAssertTrue(sut.navigationController.viewControllers.count == 1)
     }
     
     override func tearDown() {
-        super.tearDown()
         sut = nil
+        super.tearDown()
     }
 }
