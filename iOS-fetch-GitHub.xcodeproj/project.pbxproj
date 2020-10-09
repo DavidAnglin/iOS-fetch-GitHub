@@ -25,6 +25,7 @@
 		2E53BFA02530D4E600F1405A /* DecodableTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E53BF9F2530D4E600F1405A /* DecodableTestCase.swift */; };
 		2E53BFA72530D52B00F1405A /* Data+JSONFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E53BFA62530D52B00F1405A /* Data+JSONFile.swift */; };
 		2E53BFB02530D7B600F1405A /* XCTAssertEqualToAny.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E53BFAF2530D7B600F1405A /* XCTAssertEqualToAny.swift */; };
+		2E53BFBA2530E37300F1405A /* CommitsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E53BFB92530E37300F1405A /* CommitsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		2E53BF9F2530D4E600F1405A /* DecodableTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableTestCase.swift; sourceTree = "<group>"; };
 		2E53BFA62530D52B00F1405A /* Data+JSONFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+JSONFile.swift"; sourceTree = "<group>"; };
 		2E53BFAF2530D7B600F1405A /* XCTAssertEqualToAny.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTAssertEqualToAny.swift; sourceTree = "<group>"; };
+		2E53BFB92530E37300F1405A /* CommitsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 			children = (
 				2E53BF122530A45C00F1405A /* Main.storyboard */,
 				2E53BF102530A45C00F1405A /* CommitsViewController.swift */,
+				2E53BFB92530E37300F1405A /* CommitsViewModel.swift */,
 			);
 			path = CommitsView;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E53BF492530AA8100F1405A /* Coordinator.swift in Sources */,
+				2E53BFBA2530E37300F1405A /* CommitsViewModel.swift in Sources */,
 				2E53BF642530B09D00F1405A /* MainCoordinator.swift in Sources */,
 				2E53BF962530D07500F1405A /* Commit.swift in Sources */,
 				2E53BF4F2530ABCC00F1405A /* Storyboard.swift in Sources */,
