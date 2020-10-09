@@ -11,8 +11,24 @@ import XCTest
 
 class CoordinatorTests: XCTest {
     
-    func testCoordinator_whenInitialized() {
-        let sut = MainCoordinator()
-        XCTAssertTrue(sut.childControllers.isEmpty)
+    var sut: MainCoordinator!
+    
+    override func setUp() {
+        super.setUp()
+        let navigationController = UINavigationController()
+        sut = MainCoordinator(navigationController: navigationController)
+    }
+    
+    func testCoordinator_whenInitialized_childCoordinatorsIsEmpty() {
+        XCTAssertTrue(sut.childCoordinators.isEmpty)
+    }
+    
+    func testCoordinator_whenInitialized_navigationControllerInitted() {
+        XCTAssertNotNil(sut.navigationController)
+    }
+    
+    override func tearDown() {
+        super.tearDown()
+        sut = nil
     }
 }
