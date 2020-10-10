@@ -12,7 +12,7 @@ enum Constants {
 }
 
 protocol GitHubService {
-    @discardableResult func getCommits(completion: @escaping ([CommitContainer]?, Error?) -> Void) -> URLSessionDataTask
+    func getCommits(completion: @escaping ([CommitContainer]?, Error?) -> Void)
 }
 
 class GitHubClient: GitHubService {
@@ -32,7 +32,7 @@ class GitHubClient: GitHubService {
         self.responseQueue = responseQueue
     }
     
-    @discardableResult func getCommits(completion: @escaping ([CommitContainer]?, Error?) -> Void) -> URLSessionDataTask {
+    func getCommits(completion: @escaping ([CommitContainer]?, Error?) -> Void) {
         let url = URL(string: "commits", relativeTo: baseURL)!.absoluteURL
         let task = session.dataTask(with: url) { [weak self] data, response, error in
             guard let strongSelf = self else { return }
@@ -51,7 +51,6 @@ class GitHubClient: GitHubService {
             }
         }
         task.resume()
-        return task
     }
     
     private func dispatchResult<Type>(
