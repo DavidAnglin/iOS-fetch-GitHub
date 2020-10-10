@@ -26,6 +26,11 @@
 		2E53BFA72530D52B00F1405A /* Data+JSONFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E53BFA62530D52B00F1405A /* Data+JSONFile.swift */; };
 		2E53BFB02530D7B600F1405A /* XCTAssertEqualToAny.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E53BFAF2530D7B600F1405A /* XCTAssertEqualToAny.swift */; };
 		2E53BFBA2530E37300F1405A /* CommitsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E53BFB92530E37300F1405A /* CommitsViewModel.swift */; };
+		2E53BFBF2530EB6A00F1405A /* GitHubClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E53BFBE2530EB6A00F1405A /* GitHubClient.swift */; };
+		2E53BFC82530ECB900F1405A /* GitHubClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E53BFC72530ECB900F1405A /* GitHubClientTests.swift */; };
+		2E8DDFF3253111A200F59637 /* GET_Commits_ValidResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E8DDFF2253111A200F59637 /* GET_Commits_ValidResponse.json */; };
+		2E8DDFF7253111BE00F59637 /* GET_Commits_MissingValues.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E8DDFF6253111BE00F59637 /* GET_Commits_MissingValues.json */; };
+		2E8DDFFE2531469B00F59637 /* MockGitHubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8DDFFD2531469B00F59637 /* MockGitHubService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +67,11 @@
 		2E53BFA62530D52B00F1405A /* Data+JSONFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+JSONFile.swift"; sourceTree = "<group>"; };
 		2E53BFAF2530D7B600F1405A /* XCTAssertEqualToAny.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTAssertEqualToAny.swift; sourceTree = "<group>"; };
 		2E53BFB92530E37300F1405A /* CommitsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitsViewModel.swift; sourceTree = "<group>"; };
+		2E53BFBE2530EB6A00F1405A /* GitHubClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubClient.swift; sourceTree = "<group>"; };
+		2E53BFC72530ECB900F1405A /* GitHubClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubClientTests.swift; sourceTree = "<group>"; };
+		2E8DDFF2253111A200F59637 /* GET_Commits_ValidResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GET_Commits_ValidResponse.json; sourceTree = "<group>"; };
+		2E8DDFF6253111BE00F59637 /* GET_Commits_MissingValues.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GET_Commits_MissingValues.json; sourceTree = "<group>"; };
+		2E8DDFFD2531469B00F59637 /* MockGitHubService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGitHubService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +118,7 @@
 				2E53BF942530D05A00F1405A /* Models */,
 				2E53BF562530AC3D00F1405A /* CommitsView */,
 				2E53BF4D2530AA8E00F1405A /* Coordinators */,
+				2E53BFBD2530EB3F00F1405A /* Networking */,
 				2E53BF5A2530ACC000F1405A /* Resources */,
 				2E53BF172530A45F00F1405A /* LaunchScreen.storyboard */,
 				2E53BF1A2530A45F00F1405A /* Info.plist */,
@@ -120,6 +131,7 @@
 			children = (
 				2E53BF8D2530CECC00F1405A /* Models */,
 				2E53BF862530CB6B00F1405A /* Data */,
+				2E53BFC42530EC6000F1405A /* Networking */,
 				2E53BF7D2530C7B100F1405A /* CommitsView */,
 				2E53BF7C2530C79900F1405A /* Coordinator */,
 				2E53BF9D2530D4B700F1405A /* TestTypes */,
@@ -177,6 +189,8 @@
 			isa = PBXGroup;
 			children = (
 				2E53BF872530CD7F00F1405A /* Commits.json */,
+				2E8DDFF6253111BE00F59637 /* GET_Commits_MissingValues.json */,
+				2E8DDFF2253111A200F59637 /* GET_Commits_ValidResponse.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -201,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				2E53BFA52530D50700F1405A /* Extensions */,
+				2E8DDFFC2531467200F59637 /* Mocks */,
 				2E53BF9E2530D4C700F1405A /* Protocols */,
 				2E53BFAE2530D79600F1405A /* XCTestAdditions */,
 			);
@@ -229,6 +244,30 @@
 				2E53BFAF2530D7B600F1405A /* XCTAssertEqualToAny.swift */,
 			);
 			path = XCTestAdditions;
+			sourceTree = "<group>";
+		};
+		2E53BFBD2530EB3F00F1405A /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				2E53BFBE2530EB6A00F1405A /* GitHubClient.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		2E53BFC42530EC6000F1405A /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				2E53BFC72530ECB900F1405A /* GitHubClientTests.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		2E8DDFFC2531467200F59637 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				2E8DDFFD2531469B00F59637 /* MockGitHubService.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,6 +362,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E53BF882530CD7F00F1405A /* Commits.json in Resources */,
+				2E8DDFF7253111BE00F59637 /* GET_Commits_MissingValues.json in Resources */,
+				2E8DDFF3253111A200F59637 /* GET_Commits_ValidResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +379,7 @@
 				2E53BF642530B09D00F1405A /* MainCoordinator.swift in Sources */,
 				2E53BF962530D07500F1405A /* Commit.swift in Sources */,
 				2E53BF4F2530ABCC00F1405A /* Storyboard.swift in Sources */,
+				2E53BFBF2530EB6A00F1405A /* GitHubClient.swift in Sources */,
 				2E53BF112530A45C00F1405A /* CommitsViewController.swift in Sources */,
 				2E53BF0D2530A45C00F1405A /* AppDelegate.swift in Sources */,
 				2E53BF0F2530A45C00F1405A /* SceneDelegate.swift in Sources */,
@@ -350,8 +392,10 @@
 			files = (
 				2E53BF8F2530CEE300F1405A /* CommitTests.swift in Sources */,
 				2E53BFA02530D4E600F1405A /* DecodableTestCase.swift in Sources */,
+				2E53BFC82530ECB900F1405A /* GitHubClientTests.swift in Sources */,
 				2E53BF7F2530C7D800F1405A /* CommitsViewModelTests.swift in Sources */,
 				2E53BFA72530D52B00F1405A /* Data+JSONFile.swift in Sources */,
+				2E8DDFFE2531469B00F59637 /* MockGitHubService.swift in Sources */,
 				2E53BFB02530D7B600F1405A /* XCTAssertEqualToAny.swift in Sources */,
 				2E53BF792530C3B000F1405A /* CommitsViewControllerTests.swift in Sources */,
 				2E53BF5C2530AE3C00F1405A /* CoordinatorTests.swift in Sources */,
