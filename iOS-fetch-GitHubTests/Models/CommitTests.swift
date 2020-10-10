@@ -59,4 +59,16 @@ class CommitTests: XCTestCase, DecodableTestCase {
         }
         try XCTAssertEqualToAny(sut.commit.author.email, author["email"])
     }
+    
+    func test_authorString() throws {
+        guard let commit = dictionary["commit"] as? [String: Any],
+              let author = commit["author"] as? [String: String],
+              let name = author["name"],
+              let email = author["email"] else {
+            XCTFail("Coud not access commit.")
+            return
+        }
+        let authorString = String( "\(name) <\(email)>")
+        try XCTAssertEqualToAny(sut.commit.author.authorString, authorString)
+    }
 }

@@ -17,9 +17,8 @@ class MainCoordinator: Coordinator {
     
     func start() {
         let viewModel = CommitsViewModel(networkClient: GitHubClient.shared)
-        let commitsVC = CommitsViewController.instantiate()
+        let commitsVC = CommitsViewController(viewModel: viewModel)
         commitsVC.coordinator = self
-        commitsVC.viewModel = viewModel
         navigationController.pushViewController(commitsVC, animated: false)
     }
 }

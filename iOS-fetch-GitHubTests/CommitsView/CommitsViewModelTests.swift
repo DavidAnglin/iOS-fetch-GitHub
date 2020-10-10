@@ -30,6 +30,10 @@ class CommitsViewModelTests: XCTestCase {
       }
     }
     
+    func test_init_viewModel() {
+        XCTAssertNotNil(sut)
+    }
+    
     func test_init_settingCommits() {
         let commits = givenCommits()
         sut.commits = commits
@@ -47,6 +51,18 @@ class CommitsViewModelTests: XCTestCase {
     
     func test_init_commitsAreEmpty() {
         XCTAssertTrue(sut.commits.isEmpty)
+    }
+    
+    func test_error_populated() {
+        let errorOccured = expectation(description: "Error")
+        let error = NSError(domain: "com.CommitError", code: 30) as Error
+
+        sut.errorOccured = { error in
+            errorOccured.fulfill()
+        }
+        
+        sut.errorOccured?(error)
+        waitForExpectations(timeout: 5.0)
     }
     
     override func tearDown() {

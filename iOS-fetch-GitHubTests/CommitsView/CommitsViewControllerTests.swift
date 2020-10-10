@@ -10,35 +10,33 @@ import XCTest
 
 class CommitsViewControllerTests: XCTestCase {
     
-    var coordinator: MainCoordinator?
     var viewModel: CommitsVMContract?
+    var sut: CommitsViewController!
     
     override func setUp() {
-        let navigationController = UINavigationController()
-        coordinator = MainCoordinator(navigationController: navigationController)
-        coordinator?.start()
+        super.setUp()
+        let viewModel = CommitsViewModel(networkClient: MockGitHubService())
+        sut = CommitsViewController(viewModel: viewModel)
     }
 
-    func testController_whenInitialized_coordinatorIsSet() {
-        guard let commitsVC = coordinator?.navigationController.viewControllers.first as? CommitsViewController else {
-            XCTFail("Commits View Controller not in naviagtion stack")
-            return
-        }
-        
-        XCTAssertNotNil(commitsVC.coordinator)
+    func testController_whenInitialized_tableViewIsSet() {
+        sut.loadViewIfNeeded()
+        XCTAssertNotNil(sut.tableView)
     }
     
-    func testController_whenInitialized_viewModelIsSet() {
-        guard let commitsVC = coordinator?.navigationController.viewControllers.first as? CommitsViewController else {
-            XCTFail("Commits View Controller not in naviagtion stack")
-            return
-        }
-        
-        XCTAssertNotNil(commitsVC.viewModel)
+    func testController_whenInitialized_titleIsSet() {
+        sut.loadViewIfNeeded()
+        XCTAssertEqual(sut.title, "Commits")
+    }
+    
+    func testController_whenInitialized_withViewModel() {
+        sut.loadViewIfNeeded()
+        XCTAssertNotNil(sut.viewModel)
     }
     
     override func tearDown() {
-        coordinator = nil
+        sut = nil
         viewModel = nil
+        super.tearDown()
     }
 }
