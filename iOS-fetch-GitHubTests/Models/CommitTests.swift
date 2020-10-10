@@ -11,7 +11,7 @@ import XCTest
 class CommitTests: XCTestCase, DecodableTestCase {
     
     var dictionary: NSDictionary!
-    var sut: Commits!
+    var sut: CommitContainer!
     
     override func setUp() {
         super.setUp()

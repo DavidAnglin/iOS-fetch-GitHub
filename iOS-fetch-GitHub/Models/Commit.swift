@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Commits: Decodable, Equatable {
+struct CommitContainer: Decodable, Equatable {
     let commitHash: String
     let commit: Commit
     
@@ -25,4 +25,8 @@ struct Commit: Decodable, Equatable {
 struct Author: Decodable, Equatable {
     let name: String
     let email: String
+    
+    var authorString: String {
+        return "\(name) <\(email)>"
+    }
 }

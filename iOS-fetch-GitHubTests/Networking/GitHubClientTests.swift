@@ -32,7 +32,7 @@ class GitHubClientTests: XCTestCase {
       data: Data? = nil,
       statusCode: Int = 200,
       error: Error? = nil) ->
-      (calledCompletion: Bool, commits: [Commits]?, error: Error?) {
+      (calledCompletion: Bool, commits: [CommitContainer]?, error: Error?) {
 
         let response = HTTPURLResponse(url: getCommitsURL,
                                        statusCode: statusCode,
@@ -46,7 +46,7 @@ class GitHubClientTests: XCTestCase {
         sut = GitHubClient(baseURL: baseURL, session: mockSession, responseQueue: nil)
         
         var calledCompletion = false
-        var receivedCommits: [Commits]? = nil
+        var receivedCommits: [CommitContainer]? = nil
         var receivedError: Error? = nil
         
         let expectation = self.expectation(
@@ -114,7 +114,7 @@ class GitHubClientTests: XCTestCase {
           try! Data.fromJSON(fileName: "GET_Commits_ValidResponse")
 
         let decoder = JSONDecoder()
-        guard let commits = try? decoder.decode([Commits].self, from: data) else {
+        guard let commits = try? decoder.decode([CommitContainer].self, from: data) else {
             XCTFail("Failed to decode commits!.")
             return
         }
@@ -153,7 +153,7 @@ class GitHubClientTests: XCTestCase {
         var expectedError: NSError!
         let decoder = JSONDecoder()
         do {
-          _ = try decoder.decode([Commits].self, from: data)
+          _ = try decoder.decode([CommitContainer].self, from: data)
         } catch {
           expectedError = error as NSError
         }

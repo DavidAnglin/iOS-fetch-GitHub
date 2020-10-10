@@ -12,9 +12,9 @@ class MockGitHubService: GitHubService {
     
     var getCommitsCallCount = 0
     var getCommitsDataTask = URLSession.shared.dataTask(with: URL(string: Constants.gitHubBaseURL)!)
-    var getCommitsCompletion: (([Commits]?, Error?) -> Void)?
+    var getCommitsCompletion: (([CommitContainer]?, Error?) -> Void)?
     
-    func getCommits(completion: @escaping ([Commits]?, Error?) -> Void) -> URLSessionDataTask {
+    func getCommits(completion: @escaping ([CommitContainer]?, Error?) -> Void) -> URLSessionDataTask {
         getCommitsCallCount += 1
         getCommitsCompletion = completion
         return getCommitsDataTask

@@ -19,9 +19,9 @@ class CommitsViewModelTests: XCTestCase {
         sut = CommitsViewModel(networkClient: mockNetworkClient)
     }
     
-    func givenCommits(count: Int = 3) -> [Commits] {
+    func givenCommits(count: Int = 3) -> [CommitContainer] {
       return (1 ... count).map { i in
-        let commit = Commits(
+        let commit = CommitContainer(
             commitHash: "id_\(i)",
             commit: Commit(author: Author(name: "Bob_\(i)",
                                           email: "email_\(i)@gmail.com"),
@@ -42,7 +42,7 @@ class CommitsViewModelTests: XCTestCase {
         sut.commitsUpdated = commitUpdatedExpectation.fulfill
 
         sut.commits = commits
-        waitForExpectations(timeout: 5.0)
+        waitForExpectations(timeout: 0.2)
     }
     
     func test_init_commitsAreEmpty() {
