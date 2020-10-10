@@ -9,23 +9,33 @@
 /* Begin PBXBuildFile section */
 		2E53BF0D2530A45C00F1405A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E53BF0C2530A45C00F1405A /* AppDelegate.swift */; };
 		2E53BF0F2530A45C00F1405A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E53BF0E2530A45C00F1405A /* SceneDelegate.swift */; };
-		2E53BF112530A45C00F1405A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E53BF102530A45C00F1405A /* ViewController.swift */; };
-		2E53BF142530A45C00F1405A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E53BF122530A45C00F1405A /* Main.storyboard */; };
+		2E53BF112530A45C00F1405A /* CommitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E53BF102530A45C00F1405A /* CommitsViewController.swift */; };
 		2E53BF162530A45F00F1405A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E53BF152530A45F00F1405A /* Assets.xcassets */; };
 		2E53BF192530A45F00F1405A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E53BF172530A45F00F1405A /* LaunchScreen.storyboard */; };
-		2E53BF242530A45F00F1405A /* iOS_fetch_GitHubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E53BF232530A45F00F1405A /* iOS_fetch_GitHubTests.swift */; };
-		2E53BF2F2530A45F00F1405A /* iOS_fetch_GitHubUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E53BF2E2530A45F00F1405A /* iOS_fetch_GitHubUITests.swift */; };
+		2E53BF492530AA8100F1405A /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E53BF482530AA8100F1405A /* Coordinator.swift */; };
+		2E53BF5C2530AE3C00F1405A /* CoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E53BF5B2530AE3C00F1405A /* CoordinatorTests.swift */; };
+		2E53BF642530B09D00F1405A /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E53BF632530B09D00F1405A /* MainCoordinator.swift */; };
+		2E53BF792530C3B000F1405A /* CommitsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E53BF782530C3B000F1405A /* CommitsViewControllerTests.swift */; };
+		2E53BF7F2530C7D800F1405A /* CommitsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E53BF7E2530C7D800F1405A /* CommitsViewModelTests.swift */; };
+		2E53BF882530CD7F00F1405A /* CommitContainer.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E53BF872530CD7F00F1405A /* CommitContainer.json */; };
+		2E53BF8F2530CEE300F1405A /* CommitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E53BF8E2530CEE300F1405A /* CommitTests.swift */; };
+		2E53BF962530D07500F1405A /* Commit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E53BF952530D07500F1405A /* Commit.swift */; };
+		2E53BFA02530D4E600F1405A /* DecodableTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E53BF9F2530D4E600F1405A /* DecodableTestCase.swift */; };
+		2E53BFA72530D52B00F1405A /* Data+JSONFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E53BFA62530D52B00F1405A /* Data+JSONFile.swift */; };
+		2E53BFB02530D7B600F1405A /* XCTAssertEqualToAny.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E53BFAF2530D7B600F1405A /* XCTAssertEqualToAny.swift */; };
+		2E53BFBA2530E37300F1405A /* CommitsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E53BFB92530E37300F1405A /* CommitsViewModel.swift */; };
+		2E53BFBF2530EB6A00F1405A /* GitHubClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E53BFBE2530EB6A00F1405A /* GitHubClient.swift */; };
+		2E53BFC82530ECB900F1405A /* GitHubClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E53BFC72530ECB900F1405A /* GitHubClientTests.swift */; };
+		2E8DDFF3253111A200F59637 /* GET_Commits_ValidResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E8DDFF2253111A200F59637 /* GET_Commits_ValidResponse.json */; };
+		2E8DDFF7253111BE00F59637 /* GET_Commits_MissingValues.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E8DDFF6253111BE00F59637 /* GET_Commits_MissingValues.json */; };
+		2E8DDFFE2531469B00F59637 /* MockGitHubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8DDFFD2531469B00F59637 /* MockGitHubService.swift */; };
+		2E8DE0042531FB0400F59637 /* CommitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8DE0032531FB0400F59637 /* CommitCell.swift */; };
+		2E8DE00C2532041A00F59637 /* CommitsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E8DE00B2532041A00F59637 /* CommitsViewController.xib */; };
+		2E8DE0102532059300F59637 /* CommitCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E8DE00F2532059300F59637 /* CommitCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		2E53BF202530A45F00F1405A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2E53BF012530A45C00F1405A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2E53BF082530A45C00F1405A;
-			remoteInfo = "iOS-fetch-GitHub";
-		};
-		2E53BF2B2530A45F00F1405A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2E53BF012530A45C00F1405A /* Project object */;
 			proxyType = 1;
@@ -38,17 +48,32 @@
 		2E53BF092530A45C00F1405A /* iOS-fetch-GitHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-fetch-GitHub.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E53BF0C2530A45C00F1405A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E53BF0E2530A45C00F1405A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2E53BF102530A45C00F1405A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2E53BF132530A45C00F1405A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2E53BF102530A45C00F1405A /* CommitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitsViewController.swift; sourceTree = "<group>"; };
 		2E53BF152530A45F00F1405A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E53BF182530A45F00F1405A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2E53BF1A2530A45F00F1405A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E53BF1F2530A45F00F1405A /* iOS-fetch-GitHubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-fetch-GitHubTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2E53BF232530A45F00F1405A /* iOS_fetch_GitHubTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_fetch_GitHubTests.swift; sourceTree = "<group>"; };
 		2E53BF252530A45F00F1405A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2E53BF2A2530A45F00F1405A /* iOS-fetch-GitHubUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-fetch-GitHubUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2E53BF2E2530A45F00F1405A /* iOS_fetch_GitHubUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_fetch_GitHubUITests.swift; sourceTree = "<group>"; };
-		2E53BF302530A45F00F1405A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E53BF482530AA8100F1405A /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		2E53BF5B2530AE3C00F1405A /* CoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorTests.swift; sourceTree = "<group>"; };
+		2E53BF632530B09D00F1405A /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		2E53BF782530C3B000F1405A /* CommitsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitsViewControllerTests.swift; sourceTree = "<group>"; };
+		2E53BF7E2530C7D800F1405A /* CommitsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitsViewModelTests.swift; sourceTree = "<group>"; };
+		2E53BF872530CD7F00F1405A /* CommitContainer.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CommitContainer.json; sourceTree = "<group>"; };
+		2E53BF8E2530CEE300F1405A /* CommitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitTests.swift; sourceTree = "<group>"; };
+		2E53BF952530D07500F1405A /* Commit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commit.swift; sourceTree = "<group>"; };
+		2E53BF9F2530D4E600F1405A /* DecodableTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableTestCase.swift; sourceTree = "<group>"; };
+		2E53BFA62530D52B00F1405A /* Data+JSONFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+JSONFile.swift"; sourceTree = "<group>"; };
+		2E53BFAF2530D7B600F1405A /* XCTAssertEqualToAny.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTAssertEqualToAny.swift; sourceTree = "<group>"; };
+		2E53BFB92530E37300F1405A /* CommitsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitsViewModel.swift; sourceTree = "<group>"; };
+		2E53BFBE2530EB6A00F1405A /* GitHubClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubClient.swift; sourceTree = "<group>"; };
+		2E53BFC72530ECB900F1405A /* GitHubClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubClientTests.swift; sourceTree = "<group>"; };
+		2E8DDFF2253111A200F59637 /* GET_Commits_ValidResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GET_Commits_ValidResponse.json; sourceTree = "<group>"; };
+		2E8DDFF6253111BE00F59637 /* GET_Commits_MissingValues.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GET_Commits_MissingValues.json; sourceTree = "<group>"; };
+		2E8DDFFD2531469B00F59637 /* MockGitHubService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGitHubService.swift; sourceTree = "<group>"; };
+		2E8DE0032531FB0400F59637 /* CommitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitCell.swift; sourceTree = "<group>"; };
+		2E8DE00B2532041A00F59637 /* CommitsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommitsViewController.xib; sourceTree = "<group>"; };
+		2E8DE00F2532059300F59637 /* CommitCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommitCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,13 +91,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2E53BF272530A45F00F1405A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -81,7 +99,6 @@
 			children = (
 				2E53BF0B2530A45C00F1405A /* iOS-fetch-GitHub */,
 				2E53BF222530A45F00F1405A /* iOS-fetch-GitHubTests */,
-				2E53BF2D2530A45F00F1405A /* iOS-fetch-GitHubUITests */,
 				2E53BF0A2530A45C00F1405A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,7 +108,6 @@
 			children = (
 				2E53BF092530A45C00F1405A /* iOS-fetch-GitHub.app */,
 				2E53BF1F2530A45F00F1405A /* iOS-fetch-GitHubTests.xctest */,
-				2E53BF2A2530A45F00F1405A /* iOS-fetch-GitHubUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,9 +117,11 @@
 			children = (
 				2E53BF0C2530A45C00F1405A /* AppDelegate.swift */,
 				2E53BF0E2530A45C00F1405A /* SceneDelegate.swift */,
-				2E53BF102530A45C00F1405A /* ViewController.swift */,
-				2E53BF122530A45C00F1405A /* Main.storyboard */,
-				2E53BF152530A45F00F1405A /* Assets.xcassets */,
+				2E53BF942530D05A00F1405A /* Models */,
+				2E53BF562530AC3D00F1405A /* CommitsView */,
+				2E53BF4D2530AA8E00F1405A /* Coordinators */,
+				2E53BFBD2530EB3F00F1405A /* Networking */,
+				2E53BF5A2530ACC000F1405A /* Resources */,
 				2E53BF172530A45F00F1405A /* LaunchScreen.storyboard */,
 				2E53BF1A2530A45F00F1405A /* Info.plist */,
 			);
@@ -113,19 +131,146 @@
 		2E53BF222530A45F00F1405A /* iOS-fetch-GitHubTests */ = {
 			isa = PBXGroup;
 			children = (
-				2E53BF232530A45F00F1405A /* iOS_fetch_GitHubTests.swift */,
+				2E53BF8D2530CECC00F1405A /* Models */,
+				2E53BF862530CB6B00F1405A /* Data */,
+				2E53BFC42530EC6000F1405A /* Networking */,
+				2E53BF7D2530C7B100F1405A /* CommitsView */,
+				2E53BF7C2530C79900F1405A /* Coordinator */,
+				2E53BF9D2530D4B700F1405A /* TestTypes */,
 				2E53BF252530A45F00F1405A /* Info.plist */,
 			);
 			path = "iOS-fetch-GitHubTests";
 			sourceTree = "<group>";
 		};
-		2E53BF2D2530A45F00F1405A /* iOS-fetch-GitHubUITests */ = {
+		2E53BF4D2530AA8E00F1405A /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
-				2E53BF2E2530A45F00F1405A /* iOS_fetch_GitHubUITests.swift */,
-				2E53BF302530A45F00F1405A /* Info.plist */,
+				2E53BF482530AA8100F1405A /* Coordinator.swift */,
+				2E53BF632530B09D00F1405A /* MainCoordinator.swift */,
 			);
-			path = "iOS-fetch-GitHubUITests";
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		2E53BF562530AC3D00F1405A /* CommitsView */ = {
+			isa = PBXGroup;
+			children = (
+				2E53BF102530A45C00F1405A /* CommitsViewController.swift */,
+				2E53BFB92530E37300F1405A /* CommitsViewModel.swift */,
+				2E8DE0032531FB0400F59637 /* CommitCell.swift */,
+				2E8DE00B2532041A00F59637 /* CommitsViewController.xib */,
+				2E8DE00F2532059300F59637 /* CommitCell.xib */,
+			);
+			path = CommitsView;
+			sourceTree = "<group>";
+		};
+		2E53BF5A2530ACC000F1405A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2E53BF152530A45F00F1405A /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2E53BF7C2530C79900F1405A /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				2E53BF5B2530AE3C00F1405A /* CoordinatorTests.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		2E53BF7D2530C7B100F1405A /* CommitsView */ = {
+			isa = PBXGroup;
+			children = (
+				2E53BF782530C3B000F1405A /* CommitsViewControllerTests.swift */,
+				2E53BF7E2530C7D800F1405A /* CommitsViewModelTests.swift */,
+			);
+			path = CommitsView;
+			sourceTree = "<group>";
+		};
+		2E53BF862530CB6B00F1405A /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				2E53BF872530CD7F00F1405A /* CommitContainer.json */,
+				2E8DDFF6253111BE00F59637 /* GET_Commits_MissingValues.json */,
+				2E8DDFF2253111A200F59637 /* GET_Commits_ValidResponse.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		2E53BF8D2530CECC00F1405A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2E53BF8E2530CEE300F1405A /* CommitTests.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2E53BF942530D05A00F1405A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2E53BF952530D07500F1405A /* Commit.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2E53BF9D2530D4B700F1405A /* TestTypes */ = {
+			isa = PBXGroup;
+			children = (
+				2E53BFA52530D50700F1405A /* Extensions */,
+				2E8DDFFC2531467200F59637 /* Mocks */,
+				2E53BF9E2530D4C700F1405A /* Protocols */,
+				2E53BFAE2530D79600F1405A /* XCTestAdditions */,
+			);
+			path = TestTypes;
+			sourceTree = "<group>";
+		};
+		2E53BF9E2530D4C700F1405A /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				2E53BF9F2530D4E600F1405A /* DecodableTestCase.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		2E53BFA52530D50700F1405A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2E53BFA62530D52B00F1405A /* Data+JSONFile.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2E53BFAE2530D79600F1405A /* XCTestAdditions */ = {
+			isa = PBXGroup;
+			children = (
+				2E53BFAF2530D7B600F1405A /* XCTAssertEqualToAny.swift */,
+			);
+			path = XCTestAdditions;
+			sourceTree = "<group>";
+		};
+		2E53BFBD2530EB3F00F1405A /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				2E53BFBE2530EB6A00F1405A /* GitHubClient.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		2E53BFC42530EC6000F1405A /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				2E53BFC72530ECB900F1405A /* GitHubClientTests.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		2E8DDFFC2531467200F59637 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				2E8DDFFD2531469B00F59637 /* MockGitHubService.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,24 +311,6 @@
 			productReference = 2E53BF1F2530A45F00F1405A /* iOS-fetch-GitHubTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		2E53BF292530A45F00F1405A /* iOS-fetch-GitHubUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2E53BF392530A45F00F1405A /* Build configuration list for PBXNativeTarget "iOS-fetch-GitHubUITests" */;
-			buildPhases = (
-				2E53BF262530A45F00F1405A /* Sources */,
-				2E53BF272530A45F00F1405A /* Frameworks */,
-				2E53BF282530A45F00F1405A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2E53BF2C2530A45F00F1405A /* PBXTargetDependency */,
-			);
-			name = "iOS-fetch-GitHubUITests";
-			productName = "iOS-fetch-GitHubUITests";
-			productReference = 2E53BF2A2530A45F00F1405A /* iOS-fetch-GitHubUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -198,10 +325,7 @@
 					};
 					2E53BF1E2530A45F00F1405A = {
 						CreatedOnToolsVersion = 12.0.1;
-						TestTargetID = 2E53BF082530A45C00F1405A;
-					};
-					2E53BF292530A45F00F1405A = {
-						CreatedOnToolsVersion = 12.0.1;
+						LastSwiftMigration = 1200;
 						TestTargetID = 2E53BF082530A45C00F1405A;
 					};
 				};
@@ -221,7 +345,6 @@
 			targets = (
 				2E53BF082530A45C00F1405A /* iOS-fetch-GitHub */,
 				2E53BF1E2530A45F00F1405A /* iOS-fetch-GitHubTests */,
-				2E53BF292530A45F00F1405A /* iOS-fetch-GitHubUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -231,9 +354,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E8DE00C2532041A00F59637 /* CommitsViewController.xib in Resources */,
+				2E8DE0102532059300F59637 /* CommitCell.xib in Resources */,
 				2E53BF192530A45F00F1405A /* LaunchScreen.storyboard in Resources */,
 				2E53BF162530A45F00F1405A /* Assets.xcassets in Resources */,
-				2E53BF142530A45C00F1405A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,13 +365,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2E53BF282530A45F00F1405A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				2E53BF882530CD7F00F1405A /* CommitContainer.json in Resources */,
+				2E8DDFF7253111BE00F59637 /* GET_Commits_MissingValues.json in Resources */,
+				2E8DDFF3253111A200F59637 /* GET_Commits_ValidResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +378,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E53BF112530A45C00F1405A /* ViewController.swift in Sources */,
+				2E53BF492530AA8100F1405A /* Coordinator.swift in Sources */,
+				2E53BFBA2530E37300F1405A /* CommitsViewModel.swift in Sources */,
+				2E53BF642530B09D00F1405A /* MainCoordinator.swift in Sources */,
+				2E53BF962530D07500F1405A /* Commit.swift in Sources */,
+				2E8DE0042531FB0400F59637 /* CommitCell.swift in Sources */,
+				2E53BFBF2530EB6A00F1405A /* GitHubClient.swift in Sources */,
+				2E53BF112530A45C00F1405A /* CommitsViewController.swift in Sources */,
 				2E53BF0D2530A45C00F1405A /* AppDelegate.swift in Sources */,
 				2E53BF0F2530A45C00F1405A /* SceneDelegate.swift in Sources */,
 			);
@@ -268,15 +394,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E53BF242530A45F00F1405A /* iOS_fetch_GitHubTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2E53BF262530A45F00F1405A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2E53BF2F2530A45F00F1405A /* iOS_fetch_GitHubUITests.swift in Sources */,
+				2E53BF8F2530CEE300F1405A /* CommitTests.swift in Sources */,
+				2E53BFA02530D4E600F1405A /* DecodableTestCase.swift in Sources */,
+				2E53BFC82530ECB900F1405A /* GitHubClientTests.swift in Sources */,
+				2E53BF7F2530C7D800F1405A /* CommitsViewModelTests.swift in Sources */,
+				2E53BFA72530D52B00F1405A /* Data+JSONFile.swift in Sources */,
+				2E8DDFFE2531469B00F59637 /* MockGitHubService.swift in Sources */,
+				2E53BFB02530D7B600F1405A /* XCTAssertEqualToAny.swift in Sources */,
+				2E53BF792530C3B000F1405A /* CommitsViewControllerTests.swift in Sources */,
+				2E53BF5C2530AE3C00F1405A /* CoordinatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,22 +414,9 @@
 			target = 2E53BF082530A45C00F1405A /* iOS-fetch-GitHub */;
 			targetProxy = 2E53BF202530A45F00F1405A /* PBXContainerItemProxy */;
 		};
-		2E53BF2C2530A45F00F1405A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2E53BF082530A45C00F1405A /* iOS-fetch-GitHub */;
-			targetProxy = 2E53BF2B2530A45F00F1405A /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2E53BF122530A45C00F1405A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2E53BF132530A45C00F1405A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2E53BF172530A45F00F1405A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -476,6 +589,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EZVKD2Y4CX;
 				INFOPLIST_FILE = "iOS-fetch-GitHubTests/Info.plist";
@@ -487,6 +601,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.davidanglin.iOS-fetch-GitHubTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS-fetch-GitHub.app/iOS-fetch-GitHub";
@@ -498,6 +613,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EZVKD2Y4CX;
 				INFOPLIST_FILE = "iOS-fetch-GitHubTests/Info.plist";
@@ -512,46 +628,6 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS-fetch-GitHub.app/iOS-fetch-GitHub";
-			};
-			name = Release;
-		};
-		2E53BF3A2530A45F00F1405A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = EZVKD2Y4CX;
-				INFOPLIST_FILE = "iOS-fetch-GitHubUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.davidanglin.iOS-fetch-GitHubUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "iOS-fetch-GitHub";
-			};
-			name = Debug;
-		};
-		2E53BF3B2530A45F00F1405A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = EZVKD2Y4CX;
-				INFOPLIST_FILE = "iOS-fetch-GitHubUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.davidanglin.iOS-fetch-GitHubUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "iOS-fetch-GitHub";
 			};
 			name = Release;
 		};
@@ -581,15 +657,6 @@
 			buildConfigurations = (
 				2E53BF372530A45F00F1405A /* Debug */,
 				2E53BF382530A45F00F1405A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2E53BF392530A45F00F1405A /* Build configuration list for PBXNativeTarget "iOS-fetch-GitHubUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2E53BF3A2530A45F00F1405A /* Debug */,
-				2E53BF3B2530A45F00F1405A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
