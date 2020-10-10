@@ -25,5 +25,14 @@ class CommitsViewModel: CommitsVMContract {
     
     // MARK: Init
     
-    init() {}
+    init(networkClient: GitHubService) {
+        networkClient.getCommits { [weak self] commits, error in
+            guard error == nil, let unwrappedCommits = commits else {
+                print("An error occured while fetching commits.")
+                return
+            }
+            
+            self?.commits = unwrappedCommits
+        }
+    }
 }

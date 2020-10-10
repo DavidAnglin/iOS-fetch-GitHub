@@ -9,8 +9,11 @@ import UIKit
 
 class CommitsViewController: UIViewController, Storyboard {
     
+    // MARK: Properties
     weak var coordinator: MainCoordinator?
-
+    var viewModel: CommitsVMContract?
+    
+    // MARK: View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

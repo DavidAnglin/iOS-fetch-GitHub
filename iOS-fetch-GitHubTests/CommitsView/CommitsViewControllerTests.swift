@@ -9,17 +9,36 @@
 import XCTest
 
 class CommitsViewControllerTests: XCTestCase {
+    
+    var coordinator: MainCoordinator?
+    var viewModel: CommitsVMContract?
+    
+    override func setUp() {
+        let navigationController = UINavigationController()
+        coordinator = MainCoordinator(navigationController: navigationController)
+        coordinator?.start()
+    }
 
     func testController_whenInitialized_coordinatorIsSet() {
-        let navigationController = UINavigationController()
-        let coordinator = MainCoordinator(navigationController: navigationController)
-        coordinator.start()
-        
-        guard let commitsVC = coordinator.navigationController.viewControllers.first as? CommitsViewController else {
+        guard let commitsVC = coordinator?.navigationController.viewControllers.first as? CommitsViewController else {
             XCTFail("Commits View Controller not in naviagtion stack")
             return
         }
         
         XCTAssertNotNil(commitsVC.coordinator)
+    }
+    
+    func testController_whenInitialized_viewModelIsSet() {
+        guard let commitsVC = coordinator?.navigationController.viewControllers.first as? CommitsViewController else {
+            XCTFail("Commits View Controller not in naviagtion stack")
+            return
+        }
+        
+        XCTAssertNotNil(commitsVC.viewModel)
+    }
+    
+    override func tearDown() {
+        coordinator = nil
+        viewModel = nil
     }
 }

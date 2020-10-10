@@ -8,7 +8,7 @@
 import Foundation
 
 enum Constants {
-    static let gitHubBaseURL = "https://api.twitter.com/1.1/search/tweets.json"
+    static let gitHubBaseURL = "https://api.github.com/repos/ReactiveX/RxSwift/"
 }
 
 protocol GitHubService {
